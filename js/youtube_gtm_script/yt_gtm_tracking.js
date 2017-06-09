@@ -11,12 +11,12 @@
   let firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  let frameList = document.getElementsByTagName('iframe');
+  let frameList = [].slice.call(document.getElementsByTagName('iframe'));
 
   // must bind this function to the global scope to work properly within iife
   window.onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
     // Creating a YT.Player for every iframe tag
-    [...frameList].forEach(function(frame, i) {
+    frameList.forEach(function(frame, i) {
       new YT.Player(frame.id, {
         events: {
           'onReady': onPlayerReady
@@ -32,6 +32,7 @@
 
   function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.PLAYING) {
+      console.log('Whoa');
       // Keeping in mind that GTM is not set up, just pushing into an array named dataLayer
       dataLayer.push({
         'event': 'customVideoEvent',
