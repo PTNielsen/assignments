@@ -32,7 +32,6 @@
 
   function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.PLAYING) {
-      console.log('Whoa');
       // Keeping in mind that GTM is not set up, just pushing into an array named dataLayer
       dataLayer.push({
         'event': 'customVideoEvent',
