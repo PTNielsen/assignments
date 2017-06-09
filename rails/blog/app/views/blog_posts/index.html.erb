@@ -1,0 +1,7 @@
+<h1>Blogs Posts</h1>
+
+<% @blog_posts.each do |post| %>
+  <% cache post do %>
+    <h3><%= link_to post.title, blog_post_path(post) %></h3>
+  <% end %>
+<% end %>

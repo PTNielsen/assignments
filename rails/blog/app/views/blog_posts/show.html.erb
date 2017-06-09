@@ -1,0 +1,6 @@
+<% cache @blog_post do %>
+  <h1><%= @blog_post.title %></h1>
+  <h4><%= @blog_post.content %></h4>
+
+  <%= (render partial: 'comment', collection: @blog_post.comments) || "No comments" %>
+<% end %>

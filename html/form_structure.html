@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Assignment</title>
+  </head>
+
+  <body>
+    <form action="" method="post" id="assignment-form" role="form">
+      <section>
+        <label for="full-name">Full Name*</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Your full name" required>
+
+        <label for="phone-number">Phone Number*</label>
+        <input type="text" id="phone-number" name="phone-number" placeholder="name@example.com" required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="555-123-4567">
+
+        <label for="organization">Organization</label>
+        <input type="text" id="organization" name="organization">
+      </section>
+
+      <section>
+        <label for="organization-type">Organization Type</label>
+        <select id="organization-type" name="organization-type" accesskey="p">
+          <option value="" disabled selected>Select one</option>
+          <option value="governmental">Governmental</option>
+          <option value="educational">Educational</option>
+          <option value="ngo">NGO</option>
+          <option value="corporate">Corporate</option>
+        </select>
+      </section>
+
+      <section>
+        <p>How did you learn about us?</p>
+        <p>Select all that apply.</p>
+        <input type="checkbox" id="search-engine" name="source[]" value="search-engine">
+        <label for="search-engine">Search Engine</label>
+
+        <input type="checkbox" id="friend" name="source[]" value="friend">
+        <label for="friend">A friend or colleague</label>
+
+        <input type="checkbox" id="social-media" name="source[]" value="social-media">
+        <label for="social-media">Social media</label>
+
+        <input type="checkbox" id="other" name="source[]" value="other">
+        <label for="other">Other</label>
+
+        <input type="text" id="otherOption" name="otherOption" aria-label="otherOption">
+      </section>
+
+      <section>
+        <p>Select a free gift</p>
+        <radiogroup>
+          <input type="radio" id="tote-bag" name="gift" accesskey="t">
+          <label for="tote-bag">Tote Bag</label>
+          <input type="radio" id="coffee-mug" name="gift" label="Coffee Mug" accesskey="c">
+          <label for="coffee-mug">Coffee Mug</label>
+          <input type="radio" id="umbrella" name="gift" label="Umbrella" accesskey="u">
+          <label for="umbrella">Umbrella</label>
+        </radiogroup>
+      </section>
+
+      <section>
+        <label for="comments">Comments</label>
+        <textarea id="comments" form="assignment-form"></textarea>
+      </section>
+
+      <button type="submit">Submit</button>
+    </form>
+  <body>
+</html>
